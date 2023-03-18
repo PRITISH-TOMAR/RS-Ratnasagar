@@ -1,0 +1,146 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color: #F7941D;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(153, 149, 250, 0.416);
+}
+.container{
+padding: 0 50px 50px 50px;
+border: 8px solid rgb(11, 10, 41);
+border-radius: 23px;
+/* box-shadow:
+ -5px -5px 15px  rgb(143, 6, 61),
+5px 5px 15px  rgb(106, 24, 57),
+inset -5px -5px 15px rgb(9, 43, 95),
+inset 5px 5px 15px rgb(9, 43, 95)
+; */
+background: #0a3e42;
+}
+h1,h2{
+    text-align: center;
+    margin-bottom: 28px;
+    
+}
+.container .form{
+margin-top: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+/* gap:8px; */
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+.input input,#message{
+background: #000;
+width: 300px;
+height: 30px;
+border: 2px solid rgb(4, 74, 107);
+border-radius: 10px;
+font-size: 0.9em;
+padding: 5px;
+text-align: center;
+box-shadow: -5px -5px 15px rgba(9, 153, 107, 0.767)
+,5px 5px 15px rgba(9, 153, 107, 0.767);
+transition: 0.5s;
+
+}
+.input  span{
+    position: relative;
+    bottom: 32px;
+    left: 5px;
+   font-size: 1em;
+   color: rgb(236, 238, 239);
+   font-weight: 300;
+    padding:5px 5px 5px 5px ;
+    pointer-events: none;
+  transition: 0.5s;
+
+}
+
+.input input:valid ~ span,
+.input input:focus ~ span
+{
+    color: skyblue;
+    border: 1px solid skyblue;
+    background: black;
+    transform:translateX(2px) translateY(-15px);
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 10px;
+    letter-spacing: 0.1em;
+    
+    width: fit-content;
+}
+.input input:valid ,
+.input input:focus 
+{
+    border: 1px solid skyblue;
+}
+
+
+.container .form .input i{
+        
+color: rgb(3, 232, 244);
+
+
+}
+ .input input[type="submit"]{
+box-shadow: none;
+font-weight: 400;
+width: fit-content;
+background: rgb(9, 43, 95);
+color: rgb(255, 255, 255);
+border: 2px solid white;
+border-radius: 10px;
+cursor: pointer; }
+
+
+p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 0.8em;
+}
+.signin{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+h2{
+    margin-top: 15px;
+    font-size: 2;
+}
+.container .form.signin
+{
+    display: none;
+}
+.container.signinForm .form.signin{
+    display: flex;
+} 
+.sub{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}

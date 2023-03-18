@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Sign-in</title>
+    <link rel="icon" type="image/png" href="logo.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styleset.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Sign-up</h1>
+<div class="form signup">
+<form action="mailto:pritishtomar2004@gmail.com" method="post" enctype="text/plain" >
+<div class="input">
+<input type="text" id="name" name="Name" required="required"><span><i class="fa-regular fa-user"> |</i>username</span>
+</div>
+<div class="input">
+<input type="text" id="Email" name="Email" required="required"><span><i class="fa-regular fa-envelope"> |</i>E-mail</span>
+</div>
+<div class="input">
+<input type="number" id="Phone" name="Phone" required="required"><span><i class="fa-solid fa-phone">| </i>contact No.</span>
+</div>
+<div class="input ">
+<input type="password" id="Pass" name="Pass" size="=20"      required="required" class="pass"  ><span><i class="fa-sharp fa-solid fa-lock"> |</i>password</span>
+
+</div>
+<div class="input ">
+<input type="password" required="required" class="conf " onclick="green()"><span><i class="fa-solid fa-key"> |</i>confirm password</span>
+</div>
+<div class="input sub">
+    <input type="submit" value="Create Account" onclick="return validate()">
+</div>
+</form>
+<p>Already a member ? <a href="#" class="login">Login</a></p>
+
+
+<div class="form signin">
+    <h2>Sign In</h2>
+    <div class="input">
+        <input type="text" required="required"><span><i class="fa-sharp fa-solid fa-lock"> |</i>username</span>
+        </div>
+
+        <div class="input">
+            <input type="password" required="required"><span><i class="fa-sharp fa-solid fa-lock"> |</i>password</span>
+        </div>
+
+            <div class="input">
+                <input type="submit" value=" Login ">
+            </div>
+
+            <p>Not Registered ? <a href="#" class="create">Create an account</a></p>
+  
+
+
+
+</div>
+</div>
+
+<script>
+    let login=document.querySelector('.login');  
+    let sub=document.querySelector('.sub');  
+    let form=document.querySelector('form');  
+    let create=document.querySelector('.create');  
+    let container=document.querySelector('.container');  
+    let password=document.querySelector('.pass');  
+    let confirmed=document.querySelector('.conf');  
+var red="#ff6666";
+var transparent="green"
+    login.onclick=function(){
+        container.classList.add('signinForm');
+    }
+    create.onclick=function(){
+        container.classList.remove('signinForm');
+    }
+
+    function green(){
+        if(password.value.length >8&&password.value.length<15) {  
+            password.style.backgroundColor=transparent; 
+            
+            return true;  
+        }  
+    }
+    
+    function validate(){
+        
+        if(password.value.length < 8||password.value.length>15) {  
+            password.style.backgroundColor=red; 
+   alert(" **Password length must be atleast 8 characters and atmost 15 characters!"); 
+   return false;  
+  }  
+  
+//   .........................
+
+if(((password.value)!=(confirmed.value))){
+    alert("Password and confirm password do not match !");
+    
+    return false;
+}
+else{
+    password.style.backgroundColor=transparent; 
+    
+}
+
+    return true;
+     
+   
+    }
+</script>
+</body>
+</html>
